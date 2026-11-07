@@ -1,0 +1,926 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Gurupavan B R — Modern Ledger | Broadsheet Edition</title>
+<!-- Fonts: Playfair Display, Cormorant Garamond, Inter, JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface": "#F8F6F0",
+            "surface-dim": "#ECE9DF",
+            "surface-container": "#F2EFE8",
+            "surface-container-high": "#E7E3D8",
+            "surface-container-low": "#FAF8F3",
+            "surface-container-lowest": "#FFFFFF",
+            "primary": "#0E2A38", // deep petrol structural ink
+            "primary-container": "#0E2A38",
+            "secondary": "#1A6370", // rich teal accent/subheaders
+            "secondary-container": "#D2E8EC",
+            "terracotta": "#C66A4E", // muted terracotta stamps/tags
+            "terracotta-dim": "#F4E5E0",
+            "outline": "#78828A",
+            "outline-variant": "#D5D1C5",
+            "on-surface": "#0E2A38",
+            "on-surface-variant": "#43525B"
+          },
+          "fontFamily": {
+            "serif-display": ["Cormorant Garamond", "Playfair Display", "serif"],
+            "headline": ["Playfair Display", "serif"],
+            "sans": ["Inter", "sans-serif"],
+            "mono": ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    }
+</script>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+  }
+  .broadsheet-hairline {
+    border-color: #D5D1C5;
+  }
+  .broadsheet-double-top {
+    border-top: 3px double #0E2A38;
+  }
+  .broadsheet-double-bottom {
+    border-bottom: 3px double #0E2A38;
+  }
+  .ledger-stripe {
+    background-image: repeating-linear-gradient(0deg, #F8F6F0, #F8F6F0 23px, #ECE9DF 24px);
+  }
+</style>
+</head>
+<body class="bg-surface text-primary antialiased selection:bg-secondary selection:text-white min-h-screen flex flex-col font-sans text-sm">
+<!-- TOP FOLIO BANNER (Newspaper Broadsheet Header Masthead) -->
+<header class="w-full border-b border-outline-variant bg-surface sticky top-0 z-50">
+<div class="max-w-[1440px] mx-auto px-6 md:px-12">
+<!-- Top Micro Bar -->
+<div class="py-1.5 border-b border-outline-variant flex justify-between items-center text-[11px] font-mono tracking-wider text-on-surface-variant">
+<div class="flex items-center gap-4">
+<span class=""><br></span>
+
+<span class="hidden md:inline">BENGALURU, KARNATAKA</span>
+</div>
+<div class="flex items-center gap-3">
+
+<span class="text-outline-variant">|</span>
+
+</div>
+</div>
+<!-- Main Navigation Bar -->
+<div class="py-3.5 flex justify-between items-center">
+<div class="flex items-center gap-4">
+<a class="text-xl md:text-2xl font-serif-display font-bold tracking-tight text-primary flex items-center gap-2.5" href="#hero">
+<span class="inline-block w-3 h-3 bg-primary"></span>
+<span class="">GURUPAVAN B R</span>
+<span class="font-mono text-xs font-normal text-secondary tracking-widest pl-1 border-l border-outline-variant hidden sm:inline">ARCHIVAL LEDGER</span>
+</a>
+</div>
+<!-- Navigation links -->
+<nav class="hidden md:flex items-center gap-7 font-mono text-[11px] uppercase tracking-wider text-on-surface-variant">
+<a class="hover:text-secondary pb-0.5 border-b-2 border-primary text-primary transition-colors" href="#hero">Frontispiece</a>
+<a class="hover:text-secondary transition-colors" href="#analysis">Critique</a>
+<a class="hover:text-secondary transition-colors" href="#disciplines">Disciplines</a>
+<a class="hover:text-secondary transition-colors" href="#chronology">Ledger Timeline</a>
+<a class="hover:text-secondary transition-colors" href="#scholastic">Academic Matrix</a>
+<a class="hover:text-secondary transition-colors" href="#dispatch">Dispatch</a>
+</nav>
+<div class="flex items-center gap-3">
+<a class="inline-flex items-center gap-2 bg-primary text-surface px-4 py-2 font-mono text-[11px] uppercase tracking-wider hover:bg-secondary transition-colors" href="#dispatch">
+<span class="material-symbols-outlined text-[15px]">send</span>
+<span class="">Transmit Docket</span>
+</a>
+</div>
+</div>
+</div>
+</header>
+<!-- CONTINUOUS LEDGER TICKER RIBBON -->
+<div class="w-full bg-surface-container border-b border-outline-variant py-2 px-6 md:px-12 overflow-x-auto whitespace-nowrap scrollbar-none">
+<div class="max-w-[1440px] mx-auto flex items-center gap-6 text-[12px] font-mono">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 bg-terracotta text-white uppercase text-[10px] tracking-widest font-semibold">
+      AUDIT TALLY
+    </span>
+<span class="text-primary font-semibold">CGPA: 8.48 / 10.0</span>
+<span class="text-outline-variant">/</span>
+<span class="text-secondary font-medium">B.Com (Data Analytics) — Bangalore City University</span>
+<span class="text-outline-variant">/</span>
+<span class="text-primary">Operations &amp; Reconciliations: 30+ Mos Ground Tenure</span>
+<span class="text-outline-variant">/</span>
+<span class="text-terracotta font-medium">Student Council Vice President (2,000+ Students)</span>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface-variant">RPL Safety Trainer Certified (Govt. of Karnataka Skill Mission)</span>
+<span class="text-outline-variant">/</span>
+<span class="text-outline">ARCHIVAL SERIAL: #GPBR-084-A</span>
+</div>
+</div>
+<main class="flex-grow">
+<!-- SECTION 1: HERO (Broadsheet Asymmetric Dual-Column Architecture 65% / 35%) -->
+<section class="w-full border-b border-outline-variant bg-surface" id="hero">
+<div class="max-w-[1440px] mx-auto px-6 md:px-12 py-12 md:py-16">
+<!-- Broadsheet Masthead Header Rule -->
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-4 mb-10 border-b border-primary gap-2">
+<div class="flex items-center gap-3">
+<span class="bg-primary text-surface font-mono text-[10px] tracking-widest uppercase px-2 py-0.5">
+            VOL. I — FOLIO 01
+          </span>
+<span class="font-mono text-[11px] text-secondary tracking-widest uppercase font-medium">
+            COMMERCIAL PRUDENCE × QUANTITATIVE LOGIC
+          </span>
+</div>
+<div class="font-mono text-[11px] text-outline tracking-wider">
+          CLASSIFICATION: CLASS-I CANDIDATE FOLIO // DEPLOYMENT READY
+        </div>
+</div>
+<!-- Asymmetric Dual-Column Layout: Left 65%, Right 35% -->
+<div class="grid grid-cols-1 lg:grid-cols-10 gap-10 lg:gap-12 items-start">
+<!-- Left Hero Column: 65% (6.5 of 10 cols) -->
+<div class="lg:col-span-6 xl:col-span-6 flex flex-col justify-between pr-0 lg:pr-4">
+<div>
+<!-- Dateline Monospace Metadata -->
+<div class="font-mono text-[12px] text-terracotta uppercase tracking-widest mb-4 flex items-center gap-2">
+<span class="inline-block w-2 h-0.5 bg-terracotta"></span>
+<span class="">BENGALURU EXECUTIVE DISPATCH • JUNE 2024 COMMENCEMENT</span>
+</div>
+<!-- Monumental High-Contrast Editorial Serif Headline -->
+<h1 class="font-serif-display text-5xl sm:text-6xl xl:text-7xl font-semibold leading-[1.05] tracking-tight text-primary mb-6">
+              A business mindset.<br>
+<span class="italic font-normal text-secondary font-serif-display">An analytical lens.</span>
+</h1>
+<div class="w-20 h-1 bg-secondary mb-8"></div>
+<!-- Monospace Executive Rationale Subhead -->
+<div class="p-4 bg-surface-container border-l-2 border-primary mb-8 font-mono text-[12px] leading-relaxed text-on-surface">
+<span class="text-terracotta font-bold uppercase tracking-wider">[RATIONALE SUMMARY]:</span> 
+              Equipped with double-entry rigor, empirical variance controls, and computational database tools to translate operational data streams into executive balance sheet clarity.
+            </div>
+<p class="text-base md:text-lg text-on-surface-variant leading-relaxed mb-10 font-sans">
+              Bachelor of Commerce graduate in Data Analytics from Bangalore City University (8.48 CGPA). Blending thirty months of continuous, frontline supermarket cash reconciliation and transaction throughput with institutional leadership as Student Council Vice President and RPL safety training execution.
+            </p>
+</div>
+<!-- Action Cluster -->
+<div class="pt-6 border-t border-outline-variant flex flex-wrap items-center gap-4">
+<a class="bg-primary text-surface hover:bg-secondary px-6 py-3 font-mono text-[11px] uppercase tracking-wider transition-colors inline-flex items-center gap-2" href="#chronology">
+<span class="">Inspect Chronological Ledger</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<a class="bg-surface-container text-primary border border-primary px-6 py-3 font-mono text-[11px] uppercase tracking-wider hover:bg-surface transition-colors inline-flex items-center gap-2" href="#dispatch">
+<span class="material-symbols-outlined text-secondary text-[16px]">description</span>
+<span class="">Requisition Full Dossier (PDF)</span>
+</a>
+<span class="font-mono text-[11px] text-outline ml-auto">
+              REF #GPBR-084-A
+            </span>
+</div>
+</div>
+<!-- Right Hero Column: 35% (3.5 to 4 of 10 cols) - Physical-Look Financial Ledger Card -->
+<div class="lg:col-span-4 xl:col-span-4 border-2 border-primary bg-surface-container-low shadow-sm">
+<!-- Card Header Plate -->
+<div class="bg-primary text-surface p-4 flex justify-between items-center border-b border-primary">
+<div>
+<div class="font-mono text-[10px] tracking-widest text-secondary-container uppercase">OFFICIAL REGISTRY SPECIFICATION</div>
+<div class="font-serif-display text-lg font-bold tracking-wide">OPERATIONAL TALLY &amp; BALANCE CARD</div>
+</div>
+<span class="px-2 py-0.5 bg-terracotta text-white font-mono text-[10px] uppercase font-bold tracking-wider">AUDITED</span>
+</div>
+<!-- Micro Archival Monogram Stamp -->
+<div class="p-5 border-b border-outline-variant bg-surface flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 border border-primary flex items-center justify-center font-serif-display font-bold text-xl text-primary bg-surface-container">
+                GP
+              </div>
+<div>
+<div class="font-mono text-xs font-bold text-primary">GURUPAVAN B R</div>
+<div class="font-mono text-[11px] text-secondary">REGISTRY: GPBR-084-A</div>
+</div>
+</div>
+<div class="text-right font-mono text-[10px] text-outline">
+<div class="">LAT 12.9716° N</div>
+<div class="">LON 77.5946° E</div>
+<div class="text-terracotta font-medium">BENGALURU CENTRAL</div>
+</div>
+</div>
+<!-- Tabular Debit/Credit Style Metrics Table -->
+<div class="p-5 space-y-0 text-xs font-mono">
+<div class="text-[10px] text-outline uppercase tracking-wider pb-2 border-b border-outline-variant flex justify-between">
+<span class="">PARAMETER / METRIC</span>
+<span class="">CERTIFIED VALUE</span>
+</div>
+<!-- Row 1 -->
+<div class="py-2.5 border-b border-outline-variant flex justify-between items-center">
+<span class="text-on-surface-variant">Scholastic Standing:</span>
+<span class="font-bold text-primary px-2 py-0.5 bg-surface-container border border-outline-variant">CGPA 8.48 / 10.0</span>
+</div>
+<!-- Row 2 -->
+<div class="py-2.5 border-b border-outline-variant flex justify-between items-center">
+<span class="text-on-surface-variant">Retail Reconciliation:</span>
+<span class="font-bold text-secondary">30+ Consecutive Mos</span>
+</div>
+<!-- Row 3 -->
+<div class="py-2.5 border-b border-outline-variant flex justify-between items-center">
+<span class="text-on-surface-variant">Operational Accuracy Rate:</span>
+<span class="font-bold text-primary">99.8% POS Compliance</span>
+</div>
+<!-- Row 4 -->
+<div class="py-2.5 border-b border-outline-variant flex justify-between items-center">
+<span class="text-on-surface-variant">Civic Governance Role:</span>
+<span class="text-primary font-medium">Vice President (SFGC)</span>
+</div>
+<!-- Row 5 -->
+<div class="py-2.5 border-b border-outline-variant flex justify-between items-center">
+<span class="text-on-surface-variant">Vocational Training Deliveries:</span>
+<span class="text-secondary font-medium">RPL Labour Safety (State)</span>
+</div>
+<!-- Row 6 -->
+<div class="py-2.5 border-b border-outline-variant flex justify-between items-center">
+<span class="text-on-surface-variant">Core Technical Apparatus:</span>
+<span class="font-mono text-primary font-bold">SQL • Excel • Python • Accounts</span>
+</div>
+<!-- Row 7 -->
+<div class="pt-3 pb-1 flex justify-between items-center">
+<span class="text-on-surface-variant">Status:</span>
+<span class="inline-flex items-center gap-1.5 text-terracotta font-bold">
+<span class="w-2 h-2 rounded-full bg-terracotta animate-pulse"></span>
+                IMMEDIATE AVAILABILITY
+              </span>
+</div>
+</div>
+<!-- Bottom Micro Stamp Bar -->
+<div class="bg-surface-container p-3 border-t border-primary flex justify-between items-center font-mono text-[10px] text-outline">
+<span class="">VERIFIED ON FILE: BANGALORE CITY UNIV.</span>
+<span class="text-primary font-bold">SEC. RECON #01</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: BEYOND THE NUMBERS (Editorial Analysis Dossier with Prominent Quote Pullout) -->
+<section class="w-full border-b border-outline-variant bg-surface" id="analysis">
+<div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16">
+<!-- Section Header -->
+<div class="flex items-center gap-3 pb-4 mb-10 border-b border-outline-variant">
+<span class="bg-primary text-surface font-mono text-[10px] tracking-widest px-2 py-0.5 uppercase">
+          DOSSIER 01 // CRITIQUE &amp; RATIONALE
+        </span>
+<h2 class="font-serif-display text-3xl font-bold text-primary">Beyond the Numbers</h2>
+<span class="text-outline font-mono text-xs ml-auto hidden sm:inline">PERSPECTIVE STATEMENT</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+<!-- Left 5-Column Editorial Pull Quote Card -->
+<div class="lg:col-span-5 border-2 border-primary bg-surface-container p-8 flex flex-col justify-between relative">
+<div class="absolute -top-3 left-6 bg-terracotta text-white font-mono text-[10px] uppercase tracking-widest px-2.5 py-0.5">
+            EDITORIAL THESIS
+          </div>
+<div class="mt-2">
+<span class="font-serif-display text-5xl text-secondary leading-none select-none">“</span>
+<blockquote class="font-serif-display text-3xl md:text-4xl text-primary font-semibold leading-tight italic -mt-4 mb-6">
+              Data reveals patterns; business discipline turns them into measurable impact.
+            </blockquote>
+</div>
+<div class="pt-6 border-t border-outline-variant flex items-center justify-between font-mono text-xs">
+<div>
+<div class="font-bold text-primary">GURUPAVAN B R</div>
+<div class="text-secondary text-[11px]">B.Com DA • Student Leader</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-2xl">verified</span>
+</div>
+</div>
+<!-- Right 7-Column Analytical Synthesis Text -->
+<div class="lg:col-span-7 flex flex-col justify-between space-y-6 text-on-surface-variant text-base leading-relaxed">
+<p class="">
+            Trained under the rigorous canon of double-entry accounting and modern analytics, my methodology approaches corporate operations from ground truth rather than abstract theory. To evaluate performance accurately, one must comprehend how cash moves at the point-of-sale terminal, how ledger variance originates during shift closures, and how inventory discrepancies translate to the final profit and loss statement.
+          </p>
+<p class="">
+            Across thirty months with Avenue Supermarts (DMart), I balanced fast-paced retail operations with rigorous register reconciliations. Concurrently, with JC Solutions under the Karnataka State Skill Mission framework, I instructed workforce cohorts in Recognition of Prior Learning (RPL) labour safety. Together with my term as Student Council Vice President representing over 2,000 students at SFGC, this trajectory grounds my data analysis in hands-on organizational accountability.
+          </p>
+<!-- Tabular Mini Cards -->
+
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: FOUR DISCIPLINES (4-Column Balanced Index Grid with Hairline Perimeter Dividers) -->
+<section class="w-full border-b border-outline-variant bg-surface-container-low" id="disciplines">
+<div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end pb-4 mb-10 border-b border-primary gap-4">
+<div>
+<div class="flex items-center gap-2 mb-2 font-mono text-[10px] tracking-widest text-secondary uppercase">
+<span class="inline-block w-2 h-2 bg-secondary"></span>
+<span class="">DOSSIER 02 // TAXONOMY OF CAPABILITIES</span>
+</div>
+<h2 class="font-serif-display text-3xl md:text-4xl font-bold text-primary">
+            Four Disciplines. One Connected Perspective.
+          </h2>
+</div>
+<p class="font-mono text-xs text-on-surface-variant max-w-sm uppercase">
+          Disciplines verified through degree coursework and direct operational deployment.
+        </p>
+</div>
+<!-- 4-Column Balanced Index Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border border-outline-variant divide-y md:divide-y-0 md:divide-x divide-outline-variant bg-surface">
+<!-- Discipline 01 -->
+<div class="p-6 md:p-7 flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div>
+<div class="flex justify-between items-center mb-6">
+<span class="font-mono text-2xl font-bold text-secondary">#01</span>
+<span class="px-2 py-0.5 bg-surface-container border border-outline-variant font-mono text-[10px] text-primary uppercase font-bold">FINANCE</span>
+</div>
+<h3 class="font-serif-display text-2xl font-bold text-primary mb-3">Finance &amp; Accounting</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-6 font-sans">
+              Rigorous foundation in commercial law, double-entry ledgers, direct taxation structures, and financial reporting compliance.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant font-mono text-xs space-y-2 text-on-surface">
+<div class="flex items-center gap-2">
+<span class="text-terracotta">›</span> Corporate Accounting
+            </div>
+<div class="flex items-center gap-2">
+<span class="text-terracotta">›</span> Ledger &amp; Balance Reconciliation
+            </div>
+<div class="flex items-center gap-2">
+<span class="text-terracotta">›</span> Income Tax Law (Old/New)
+            </div>
+<div class="flex items-center gap-2">
+<span class="text-terracotta">›</span> Financial Statement Audit
+            </div>
+</div>
+</div>
+<!-- Discipline 02 -->
+<div class="p-6 md:p-7 flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div>
+<div class="flex justify-between items-center mb-6">
+<span class="font-mono text-2xl font-bold text-secondary">#02</span>
+<span class="px-2 py-0.5 bg-surface-container border border-outline-variant font-mono text-[10px] text-secondary uppercase font-bold">DATA</span>
+</div>
+<h3 class="font-serif-display text-2xl font-bold text-primary mb-3">Data &amp; Analytics</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-6 font-sans">
+              Quantitative modeling, structured querying logic, operations research, and statistical trend distillation from transaction logs.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant font-mono text-xs space-y-2 text-on-surface">
+<div class="flex items-center gap-2">
+<span class="text-secondary">›</span> Advanced Excel (VBA/Pivot)
+            </div>
+<div class="flex items-center gap-2">
+<span class="text-secondary">›</span> SQL Schema &amp; Window Queries
+            </div>
+<div class="flex items-center gap-2">
+<span class="text-secondary">›</span> Python Data Fundamentals
+            </div>
+<div class="flex items-center gap-2">
+<span class="text-secondary">›</span> Business Statistics &amp; OR
+            </div>
+</div>
+</div>
+<!-- Discipline 03 -->
+<div class="p-6 md:p-7 flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div>
+<div class="flex justify-between items-center mb-6">
+<span class="font-mono text-2xl font-bold text-terracotta">#03</span>
+<span class="px-2 py-0.5 bg-surface-container border border-outline-variant font-mono text-[10px] text-terracotta uppercase font-bold">OPS</span>
+</div>
+<h3 class="font-serif-display text-2xl font-bold text-primary mb-3">Business Operations</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-6 font-sans">
+              Ground-level operational execution, register closing reconciliations, inventory flow control, and shrinkage prevention.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant font-mono text-xs space-y-2 text-on-surface">
+<div class="flex items-center gap-2">
+<span class="text-terracotta">›</span> High-Volume Cash Balancing
+            </div>
+<div class="flex items-center gap-2">
+<span class="text-terracotta">›</span> Inventory Flow &amp; Restock
+            </div>
+<div class="flex items-center gap-2">
+<span class="text-terracotta">›</span> POS System Operations
+            </div>
+<div class="flex items-center gap-2">
+<span class="text-terracotta">›</span> Frontline Dispute Resolution
+            </div>
+</div>
+</div>
+<!-- Discipline 04 -->
+<div class="p-6 md:p-7 flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div>
+<div class="flex justify-between items-center mb-6">
+<span class="font-mono text-2xl font-bold text-secondary">#04</span>
+<span class="px-2 py-0.5 bg-surface-container border border-outline-variant font-mono text-[10px] text-primary uppercase font-bold">LEADERSHIP</span>
+</div>
+<h3 class="font-serif-display text-2xl font-bold text-primary mb-3">Governance &amp; Training</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-6 font-sans">
+              Executive collegiate leadership, industrial safety protocol transmission, and stakeholder liaison under institutional guidelines.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant font-mono text-xs space-y-2 text-on-surface">
+<div class="flex items-center gap-2">
+<span class="text-secondary">›</span> Student Council Vice Presidency
+            </div>
+<div class="flex items-center gap-2">
+<span class="text-secondary">›</span> RPL Labour Safety Instruction
+            </div>
+<div class="flex items-center gap-2">
+<span class="text-secondary">›</span> Budget Allocation Logistics
+            </div>
+<div class="flex items-center gap-2">
+<span class="text-secondary">›</span> Multi-Tier Consensus Building
+            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: CHRONOLOGICAL LEDGER (Split-Panel Career Timeline with Ledger Entry Stamps) -->
+<section class="w-full border-b border-outline-variant bg-surface" id="chronology">
+<div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16">
+<!-- Section Header -->
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-4 mb-10 border-b border-outline-variant gap-4">
+<div>
+<span class="bg-primary text-surface font-mono text-[10px] tracking-widest px-2 py-0.5 uppercase block w-fit mb-2">
+            DOSSIER 03 // AUDITED WORK REPOSITORIES
+          </span>
+<h2 class="font-serif-display text-3xl md:text-4xl font-bold text-primary">Chronological Ledger</h2>
+</div>
+<div class="font-mono text-xs text-secondary border border-secondary px-3 py-1 bg-surface-container">AUDITED PERIOD: MARCH 2023 – PRESENT</div>
+</div>
+<div class="space-y-10"><div class="border-2 border-primary bg-surface-container-low p-6 md:p-8 relative">
+<div class="flex flex-wrap justify-between items-start gap-4 pb-5 border-b border-outline-variant">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 bg-primary text-surface flex items-center justify-center font-mono font-bold text-base flex-shrink-0">
+01
+</div>
+<div>
+<div class="flex items-center gap-2 flex-wrap mb-1">
+<span class="bg-secondary text-white font-mono text-[10px] uppercase font-bold tracking-wider px-2 py-0.5">
+ACTIVE TENURE // ENTERPRISE FINANCIAL DESK
+</span>
+<span class="font-mono text-xs text-outline">DOC REF: VOYA-FIN-REC-2026</span>
+</div>
+<h3 class="font-serif-display text-2xl md:text-3xl font-bold text-primary">
+Reconciliation Associate – Journal Desk
+</h3>
+<p class="font-mono text-xs text-secondary font-medium">
+Voya Financial <span class="text-outline font-normal">| Corporate Reconciliation &amp; General Ledger Operations</span>
+</p>
+</div>
+</div>
+<div class="font-mono text-xs text-right bg-surface border border-outline-variant px-3 py-1.5">
+<div class="font-bold text-primary">AUGUST 31, 2026 – PRESENT</div>
+<div class="text-[11px] text-terracotta font-medium">BENGALURU, KARNATAKA</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 pt-6">
+<div class="md:col-span-4 border-r-0 md:border-r border-outline-variant pr-4">
+<div class="font-mono text-xs font-bold text-primary uppercase mb-2">Scope of Responsibility</div>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-4">
+Working within the Corporate Reconciliation Team supporting general ledger account reconciliation, BlackLine tool workflows, and journal entry governance.
+</p>
+<div class="bg-surface p-3 border border-outline-variant font-mono text-[11px] space-y-1.5 text-on-surface">
+<div class=""><span class="text-outline">CORE TOOLING:</span> BlackLine &amp; ERP</div>
+<div class=""><span class="text-outline">SPECIALIZATION:</span> Balance Sheet &amp; P&amp;L</div>
+<div class=""><span class="text-outline">DESK:</span> Journal Governance</div>
+<div class=""><span class="text-outline">AUDIT STATUS:</span> Active Verified</div>
+</div>
+</div>
+<div class="md:col-span-8 pl-0 md:pl-2">
+<div class="font-mono text-xs font-bold text-secondary uppercase mb-3">Audited Contributions</div>
+<ul class="space-y-3 text-xs md:text-sm text-on-surface font-sans">
+<li class="flex items-start gap-3">
+<span class="w-2 h-2 bg-secondary mt-1.5 flex-shrink-0"></span>
+<span class="">Working in the Reconciliation Team, supporting high-integrity account reconciliation activities across enterprise entities.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="w-2 h-2 bg-secondary mt-1.5 flex-shrink-0"></span>
+<span class="">Utilizing BlackLine for reconciliation-related workflows, variance tracking, and gaining practical exposure to automated balance certification.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="w-2 h-2 bg-secondary mt-1.5 flex-shrink-0"></span>
+<span class="">Handling Journal Desk activities and supporting end-to-end journal entry review, verification, and posting.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="w-2 h-2 bg-secondary mt-1.5 flex-shrink-0"></span>
+<span class="">Applying foundational debit and credit concepts to evaluate the downstream impact of adjustments on P&amp;L and Balance Sheet accounts.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="w-2 h-2 bg-secondary mt-1.5 flex-shrink-0"></span>
+<span class="">Reviewing ledger and sub-ledger information, investigating discrepancies, and resolving reconciliation differences.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Entry 01: RPL Labour Safety Trainer Intern -->
+<div class="border-2 border-primary bg-surface-container-low p-6 md:p-8 relative">
+<!-- Ledger Stamp Badge -->
+<div class="flex flex-wrap justify-between items-start gap-4 pb-5 border-b border-outline-variant">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 bg-secondary text-surface flex items-center justify-center font-mono font-bold text-base flex-shrink-0">02</div>
+<div>
+<div class="flex items-center gap-2 flex-wrap mb-1">
+<span class="bg-terracotta text-white font-mono text-[10px] uppercase font-bold tracking-wider px-2 py-0.5">
+                    CONTRACT ENGAGEMENT / STATE MISSION
+                  </span>
+<span class="font-mono text-xs text-outline">DOC REF: JCS-RPL-2025</span>
+</div>
+<h3 class="font-serif-display text-2xl md:text-3xl font-bold text-primary">
+                  RPL Labour Safety Trainer Intern
+                </h3>
+<p class="font-mono text-xs text-secondary font-medium">
+                  JC Solutions <span class="text-outline font-normal">| In association with Karnataka State Skill Development Mission</span>
+</p>
+</div>
+</div>
+<div class="font-mono text-xs text-right bg-surface border border-outline-variant px-3 py-1.5">
+<div class="font-bold text-primary">MAY 2025 – MAY 2026</div>
+<div class="text-[11px] text-outline">BENGALURU, KARNATAKA</div>
+</div>
+</div>
+<!-- Split-Panel Details -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 pt-6">
+<div class="md:col-span-4 border-r-0 md:border-r border-outline-variant pr-4">
+<div class="font-mono text-xs font-bold text-primary uppercase mb-2">Scope of Responsibility</div>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-4">
+                Instruction and administrative verification of standardized occupational health and workplace hazard containment for unorganized worker cohorts.
+              </p>
+<div class="bg-surface p-3 border border-outline-variant font-mono text-[11px] space-y-1.5 text-on-surface">
+<div class=""><span class="text-outline">FRAMEWORK:</span> Govt. RPL Norms</div>
+<div class=""><span class="text-outline">TARGET:</span> Construction &amp; Industrial</div>
+<div class=""><span class="text-outline">OUTPUT:</span> Certified Compliance</div>
+</div>
+</div>
+<div class="md:col-span-8 pl-0 md:pl-2">
+<div class="font-mono text-xs font-bold text-secondary uppercase mb-3">AUDITED PERIOD: MARCH 2023 – PRESENT</div>
+<ul class="space-y-3 text-xs md:text-sm text-on-surface font-sans">
+<li class="flex items-start gap-3">
+<span class="w-2 h-2 bg-secondary mt-1.5 flex-shrink-0"></span>
+<span class="">Instructed structured occupational health, industrial safety, and protective gear mandates under the Recognition of Prior Learning (RPL) state initiative.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="w-2 h-2 bg-secondary mt-1.5 flex-shrink-0"></span>
+<span class="">Managed end-to-end candidate registration ledgers, biometric skill verification data, and state certification compliance logs with zero documentation defects.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="w-2 h-2 bg-secondary mt-1.5 flex-shrink-0"></span>
+<span class="">Documented on-site safety assessment records and bridged grassroots worker comprehension barriers with official procedural manuals.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Entry 02: Avenue Supermarts (DMart) -->
+<div class="border-2 border-primary bg-surface-container-low p-6 md:p-8 relative">
+<!-- Ledger Stamp Badge -->
+<div class="flex flex-wrap justify-between items-start gap-4 pb-5 border-b border-outline-variant">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 bg-primary text-surface flex items-center justify-center font-mono font-bold text-base flex-shrink-0">03</div>
+<div>
+<div class="flex items-center gap-2 flex-wrap mb-1">
+<span class="bg-primary text-surface font-mono text-[10px] uppercase font-bold tracking-wider px-2 py-0.5">
+                    CONCURRENT RETAIL FIELD SERVICE
+                  </span>
+<span class="font-mono text-xs text-outline">DOC REF: ASL-BLR-084</span>
+</div>
+<h3 class="font-serif-display text-2xl md:text-3xl font-bold text-primary">
+                  Part-Time Cashier &amp; Retail Operations Associate
+                </h3>
+<p class="font-mono text-xs text-secondary font-medium">
+                  Avenue Supermarts Ltd. (DMart) <span class="text-outline font-normal">| Commercial Operations Division</span>
+</p>
+</div>
+</div>
+<div class="font-mono text-xs text-right bg-surface border border-outline-variant px-3 py-1.5">
+<div class="font-bold text-primary">MARCH 2023 – OCTOBER 2025</div>
+<div class="text-[11px] text-terracotta font-medium">30+ CONSECUTIVE MONTHS</div>
+</div>
+</div>
+<!-- Split-Panel Details -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 pt-6">
+<div class="md:col-span-4 border-r-0 md:border-r border-outline-variant pr-4">
+<div class="font-mono text-xs font-bold text-primary uppercase mb-2">Scope of Responsibility</div>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-4">
+                High-cadence retail transaction execution, strict point-of-sale cash register drawer audits, and shelf inventory turnover coordination.
+              </p>
+<div class="bg-surface p-3 border border-outline-variant font-mono text-[11px] space-y-1.5 text-on-surface">
+<div class=""><span class="text-outline">TURNOVER:</span> Peak Supermarket POS</div>
+<div class=""><span class="text-outline">RECONCILIATION:</span> Daily Shift Close</div>
+<div class=""><span class="text-outline">DISCREPANCY:</span> Under Audit Bounds (&lt;0.2%)</div>
+</div>
+</div>
+<div class="md:col-span-8 pl-0 md:pl-2">
+<div class="font-mono text-xs font-bold text-primary uppercase mb-3">Audited Contributions</div>
+<ul class="space-y-3 text-xs md:text-sm text-on-surface font-sans">
+<li class="flex items-start gap-3">
+<span class="w-2 h-2 bg-primary mt-1.5 flex-shrink-0"></span>
+<span class="">Operated terminal checkouts under high volume, accurately handling cash, unified payments (UPI), and point-of-sale card channels with sustained balancing precision.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="w-2 h-2 bg-primary mt-1.5 flex-shrink-0"></span>
+<span class="">Executed closing register balancing, drawer tallies, physical vs. electronic cash reconciliation, and safe-deposit protocols per corporate audit guidelines.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="w-2 h-2 bg-primary mt-1.5 flex-shrink-0"></span>
+<span class="">Coordinated with store back-office inventory personnel on shelf restocking, barcode variance detection, shrink prevention, and promotional compliance.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="w-2 h-2 bg-primary mt-1.5 flex-shrink-0"></span>
+<span class="">Resolved frontline transactional discrepancies, price mismatches, and return requests with diplomatic composure and operational speed.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: SCHOLASTIC & APPLIED CONCEPTS (High-Density Tabular Matrix) -->
+<section class="w-full border-b border-outline-variant bg-surface-container-low" id="scholastic">
+<div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16">
+<!-- Section Header -->
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-4 mb-10 border-b border-primary gap-4">
+<div>
+<span class="bg-primary text-surface font-mono text-[10px] tracking-widest px-2 py-0.5 uppercase block w-fit mb-2">
+            DOSSIER 04 // SCHOLASTIC TRANSCRIPT &amp; CIVIC SERVICE
+          </span>
+<h2 class="font-serif-display text-3xl md:text-4xl font-bold text-primary">Academic &amp; Applied Matrix</h2>
+</div>
+<div class="font-mono text-xs text-outline">
+          INSTITUTION: SESHADRIPURAM FIRST GRADE COLLEGE // BCU AFFILIATED
+        </div>
+</div>
+<!-- High-Density Tabular Matrix -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left: Scholastic Degree & Curriculum Matrix (7 Cols) -->
+<div class="lg:col-span-7 border-2 border-primary bg-surface p-6 md:p-8 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start pb-4 border-b border-outline-variant mb-6">
+<div>
+<span class="font-mono text-[10px] uppercase tracking-widest text-secondary font-bold">PRIMARY DEGREE</span>
+<h3 class="font-serif-display text-2xl font-bold text-primary mt-0.5">Dr. Manmohan Singh Bengaluru City University</h3>
+<p class="text-xs text-on-surface-variant font-mono">Seshadripuram First Grade College (SFGC), Bengaluru</p>
+</div>
+<div class="text-right">
+<span class="font-mono text-3xl font-bold text-secondary block leading-none">8.48</span>
+<span class="font-mono text-[10px] text-outline uppercase tracking-wider">CUMULATIVE CGPA / 10.0</span>
+</div>
+</div>
+<div class="mb-6">
+<div class="font-serif-display text-xl font-bold text-primary mb-2">
+                Bachelor of Commerce in Data Analytics (B.Com DA)
+              </div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+                An intensive dual-focus curriculum marrying full statutory commerce modules (mercantile jurisprudence, taxation, corporate accounting) with mathematical analytics, spreadsheet modeling, and operations research.
+              </p>
+</div>
+<!-- Curricular High-Density Table -->
+<div class="border border-outline-variant">
+<div class="bg-surface-container px-3 py-1.5 border-b border-outline-variant font-mono text-[10px] uppercase font-bold text-primary">
+                CORE CURRICULAR COMPONENT BREAKDOWN
+              </div>
+<div class="divide-y divide-outline-variant font-mono text-xs">
+<div class="p-2.5 flex justify-between items-center bg-surface">
+<span class="text-on-surface">Data Analytics &amp; Business Visualization</span>
+<span class="text-secondary font-semibold">Distinction Tier</span>
+</div>
+<div class="p-2.5 flex justify-between items-center bg-surface-container-low">
+<span class="text-on-surface">Income Tax Law &amp; Corporate Practice</span>
+<span class="text-secondary font-semibold">Statutory Accounting</span>
+</div>
+<div class="p-2.5 flex justify-between items-center bg-surface">
+<span class="text-on-surface">Operations Research &amp; Quantitative Methods</span>
+<span class="text-secondary font-semibold">Mathematical Modeling</span>
+</div>
+<div class="p-2.5 flex justify-between items-center bg-surface-container-low">
+<span class="text-on-surface">Advanced Excel &amp; Financial Workbook Design</span>
+<span class="text-secondary font-semibold">Analytical Modeling</span>
+</div>
+<div class="p-2.5 flex justify-between items-center bg-surface">
+<span class="text-on-surface">Corporate Law, Governance &amp; Auditing</span>
+<span class="text-secondary font-semibold">Regulatory Theory</span>
+</div>
+</div>
+</div><div class="mt-4 p-3.5 bg-surface-container-low border border-outline-variant flex flex-col sm:flex-row sm:items-center justify-between gap-2 font-mono text-xs"><div class="flex items-center gap-2"><span class="px-1.5 py-0.5 bg-primary text-surface font-mono text-[10px] uppercase font-bold tracking-wider">PRIOR CREDENTIAL</span><span class="font-bold text-primary">Pre-University Examination (KSEEB):</span><span class="text-on-surface-variant">Commerce Stream (Acc., Stats., Math., Bus. Studies)</span></div><span class="font-bold text-terracotta bg-surface px-2 py-0.5 border border-outline-variant self-start sm:self-auto">77.0% FIRST CLASS</span></div>
+</div>
+<!-- Secondary Scholastic Record -->
+
+</div>
+<!-- Right: Governance & Applied Projects (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<!-- Governance Docket Card -->
+<div class="border-2 border-primary bg-surface p-6 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start pb-3 border-b border-outline-variant mb-4">
+<div>
+<span class="font-mono text-[10px] uppercase tracking-widest text-terracotta font-bold">ELECTED MANDATE</span>
+<h4 class="font-serif-display text-xl font-bold text-primary mt-0.5">Student Council Leadership</h4>
+</div>
+<span class="font-mono text-xs font-bold text-primary bg-surface-container px-2 py-0.5 border border-outline-variant">
+                  2023 – 2024
+                </span>
+</div>
+<div class="font-mono text-sm font-bold text-primary mb-2 flex items-center gap-2">
+<span class="w-2 h-2 bg-terracotta"></span>
+<span class="">Vice President, Student Council (SFGC)</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-4">
+                Elected to executive collegiate governance overseeing 2,000+ enrolled peers. Acted as primary executive bridge between faculty council and student body committees.
+              </p>
+<div class="space-y-2 border-t border-outline-variant pt-3 font-mono text-[11px] text-on-surface">
+<div class="flex items-start gap-2">
+<span class="text-secondary">›</span> Co-managed resource budgeting &amp; event logistics for Annual Institutional Management Symposium.
+                </div>
+<div class="flex items-start gap-2">
+<span class="text-secondary">›</span> Represented institution at inter-collegiate Management Fest analytics challenges.
+                </div>
+<div class="flex items-start gap-2">
+<span class="text-secondary">›</span> Led student committee resolving grievances on facility access and study schedules.
+                </div>
+</div>
+</div>
+</div>
+<!-- Applied Concepts Summary Index -->
+<div class="border border-outline-variant bg-surface p-5 font-mono text-xs">
+<div class="flex justify-between items-center pb-2 mb-3 border-b border-outline-variant">
+<span class="font-bold text-primary uppercase text-[11px]">Applied Analytical Concepts</span>
+<span class="text-terracotta text-[10px] font-bold">DOSSIER EXHIBITS</span>
+</div>
+<div class="space-y-3">
+<div class="p-2.5 bg-surface-container border border-outline-variant">
+<div class="flex justify-between text-[11px] font-bold text-primary mb-1">
+<span class="">#01 Supermarket Inventory Turn Model</span>
+<span class="text-secondary">EXCEL / VBA</span>
+</div>
+<p class="text-[11px] text-on-surface-variant font-sans">
+                  Simulated DMart operational queues &amp; safety buffer replenishment to lower stockout probability.
+                </p>
+</div>
+<div class="p-2.5 bg-surface-container border border-outline-variant">
+<div class="flex justify-between text-[11px] font-bold text-primary mb-1">
+<span class="">#02 SQL POS Register Variance Audit</span>
+<span class="text-secondary">POSTGRESQL</span>
+</div>
+<p class="text-[11px] text-on-surface-variant font-sans">
+                  Relational queries for cashier drawer balance auditing, hourly basket turnover, and tender-type breakdown.
+                </p>
+</div>
+<div class="p-2.5 bg-surface-container border border-outline-variant">
+<div class="flex justify-between text-[11px] font-bold text-primary mb-1">
+<span class="">#03 Income Tax &amp; Enterprise Estimator</span>
+<span class="text-secondary">WORKBOOK</span>
+</div>
+<p class="text-[11px] text-on-surface-variant font-sans">
+                  Comparative fiscal model evaluating Old vs. New tax regimes with automated advance liability schedules.
+                </p>
+</div>
+<div class="p-2.5 bg-surface-container border border-outline-variant"><div class="flex justify-between text-[11px] font-bold text-primary mb-1">
+<span class="">#04 General Accounting &amp; Bookkeeping</span>
+<span class="text-secondary">ACCOUNTING</span>
+</div>
+<p class="text-[11px] text-on-surface-variant font-sans">
+Core accounting operations including journal entry recording, general ledger maintenance, bank reconciliation statements (BRS), voucher management, and trial balance verification.
+</p></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: TRANSMISSION DISPATCH (Archival Dispatch Docket Card) -->
+<section class="w-full bg-surface-container py-16 border-b border-outline-variant" id="dispatch">
+<div class="max-w-[1440px] mx-auto px-6 md:px-12">
+<!-- Docket Frame -->
+<div class="border-4 border-primary bg-surface p-8 md:p-12 relative shadow-md">
+<!-- Top Docket Header Ribbon -->
+<div class="flex flex-wrap justify-between items-center pb-6 mb-8 border-b-2 border-primary gap-4">
+<div>
+<div class="font-mono text-[10px] uppercase tracking-widest text-terracotta font-bold">
+              OFFICIAL TRANSMISSION REQUISITION // APPLICANT DOSSIER #084-A
+            </div>
+<h2 class="font-serif-display text-4xl md:text-5xl font-bold text-primary mt-1">
+              Let's Connect the Dots.
+            </h2>
+</div>
+<div class="font-mono text-xs border border-primary px-3 py-2 bg-surface-container text-right">
+<div class="text-[10px] text-outline">STATUS OF AVAILABILITY</div>
+<div class="text-secondary font-bold">IMMEDIATE COMMENCEMENT</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Dispatch Text Rationale -->
+<div class="lg:col-span-6 space-y-4">
+<p class="text-base text-on-surface-variant leading-relaxed font-sans">
+              Currently entertaining early-career analyst roles, operations leadership tracks, and business intelligence associate positions across Bengaluru, Hyderabad, Mumbai, and pan-India financial ecosystems.
+            </p>
+<div class="p-4 bg-surface-container border-l-2 border-secondary font-mono text-xs space-y-1.5">
+<div class="text-primary font-semibold">TARGET DOMAINS:</div>
+<div class="text-on-surface-variant">• Financial Operations</div>
+<div class="text-on-surface-variant">• Business Analysis &amp; Commercial Reporting</div>
+<div class="text-on-surface-variant">• Reconciliations</div>
+</div>
+<div class="font-mono text-[11px] text-outline">
+              APPLICANT RECORD: GURUPAVAN B R (BANGALORE CITY UNIVERSITY GRADUATE)
+            </div>
+</div>
+<!-- Dispatch Docket Actions -->
+<div class="lg:col-span-6 space-y-3 font-mono text-xs">
+<!-- Email Item -->
+<div class="border-2 border-primary p-4 bg-surface-container-low flex justify-between items-center hover:bg-surface-container transition-colors">
+<div>
+<span class="text-[10px] text-outline block uppercase tracking-wider">ELECTRONIC TRANSMISSION:</span>
+<span class="font-bold text-primary text-sm">[CONTACT_EMAIL_PENDING]</span>
+</div>
+<button class="bg-primary text-surface p-2 hover:bg-secondary transition-colors" title="Copy Transmission Protocol">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+<!-- LinkedIn Item -->
+<div class="border-2 border-primary p-4 bg-surface-container-low flex justify-between items-center hover:bg-surface-container transition-colors">
+<div>
+<span class="text-[10px] text-outline block uppercase tracking-wider">PROFESSIONAL REGISTRY (LINKEDIN):</span>
+<span class="font-bold text-primary text-sm">[LINKEDIN_URL_PENDING]</span>
+</div>
+<button class="bg-primary text-surface p-2 hover:bg-secondary transition-colors" title="Visit Profile Registry">
+<span class="material-symbols-outlined text-[18px]">north_east</span>
+</button>
+</div>
+<!-- Verified CV Docket Item -->
+<div class="border-2 border-terracotta p-4 bg-surface-container-low flex justify-between items-center hover:bg-surface-container transition-colors">
+<div>
+<span class="text-[10px] text-terracotta block uppercase tracking-wider font-bold">VERIFIED CURRICULUM VITAE:</span>
+<span class="font-bold text-primary text-sm">FOLIO_GPBR_RESUME_V2.4.PDF [PENDING]</span>
+</div>
+<button class="bg-terracotta text-white p-2 hover:bg-primary transition-colors" title="Requisition Resume PDF">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Docket Footer Note -->
+<div class="mt-8 pt-4 border-t border-outline-variant flex flex-wrap justify-between items-center text-[10px] font-mono text-outline gap-2">
+<span class="">ORIGIN: BENGALURU, KARNATAKA, INDIA</span>
+<span class="">ENCRYPTION: ARCHIVAL FOLIO VERIFIED</span>
+<span class="">EXPEDITE CODE: #GPBR-084</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER (Archival Broadsheet Colophon) -->
+<footer class="w-full border-t-2 border-primary px-6 md:px-12 py-10 bg-surface text-primary">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div>
+<div class="font-serif-display text-xl font-bold tracking-tight mb-1">
+        GPBR — MODERN BROADSHEET LEDGER
+      </div>
+<p class="font-mono text-[11px] text-on-surface-variant">
+        © MMXXIV GURUPAVAN B R. CANDIDATE FOLIO RECORD NO. 084-A.
+      </p>
+<p class="text-xs text-outline font-sans mt-0.5">
+        Set in Cormorant Garamond, Playfair Display, Inter &amp; JetBrains Mono. Bengaluru, India.
+      </p>
+</div>
+<!-- Back to top and quick links -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 font-mono text-xs">
+<div class="flex flex-wrap gap-4 uppercase text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#hero">Colophon</a>
+<a class="hover:text-primary transition-colors" href="#disciplines">Disciplines</a>
+<a class="hover:text-primary transition-colors" href="#chronology">Timeline</a>
+<a class="hover:text-primary transition-colors" href="#dispatch">Dispatch</a>
+</div>
+<a class="bg-surface-container border border-primary px-3.5 py-1.5 uppercase hover:bg-primary hover:text-surface transition-colors inline-flex items-center gap-1.5" href="#hero">
+<span class="">Ascend to Top</span>
+<span class="material-symbols-outlined text-[15px]">arrow_upward</span>
+</a>
+</div>
+</div>
+</footer>
+<!-- Micro-Interactions Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+</script>
+
+
+</body></html>
